@@ -33,6 +33,66 @@
 }
 
 body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   font-size: 1.8rem;
   font-family: "Rubik", sans-serif;
+  background-color: var(--Very-dark-blue);
+}
+
+.profile {
+  width: 250px;
+  height: 350px;
+  padding: 30px;
+  background-color: var(--Blue);
+  color: white;
+  border-radius: 16px;
+  margin-bottom: 30px;
+}
+
+.profile img {
+  height: 80px;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+
+.profile p {
+  font-size: 1.6rem;
+  color: var(--Pale-Blue);
+  margin-bottom: 5px;
+}
+
+.profile h1 {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.panel {
+  width: 250px;
+  height: 520px;
+  background-color: var(--Dark-blue);
+  color: var(--Desaturated-blue);
+  border-radius: 16px;
+}
+
+.panel li {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.data-card {
+  width: 250px;
+  height: 245px;
+  margin-bottom: 30px;
+  color: white;
+  background-color: var(--Dark-blue);
+  border-radius: 16px;
+}
+
+#data-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
