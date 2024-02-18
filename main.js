@@ -4,6 +4,7 @@ const weeklyButton = document.getElementById('weekly');
 const monthlyButton = document.getElementById('monthly');
 
 
+
 // Lee el contenido del archivo data.json usando Fetch API
 fetch('data.json')
     .then(response => response.json())
@@ -37,7 +38,9 @@ fetch('data.json')
             dataContainer.appendChild(imageCard);
         });
         dailyActive();
+        
     })
+    
     .catch(error => console.error('Error fetching data:', error));
 
 function dailyActive () {
@@ -45,9 +48,8 @@ function dailyActive () {
     liDaily.forEach(li => {
         li.classList.add('active');
     });
+    dailyButton.classList.add('active');
 }
-
-
 
 dailyButton.addEventListener('click', ()=>{
     const liDaily = document.querySelectorAll('.daily');
@@ -63,6 +65,9 @@ dailyButton.addEventListener('click', ()=>{
     liDaily.forEach(li => {
         li.classList.add('active');
     });
+    dailyButton.classList.add('active');
+    weeklyButton.classList.remove('active');
+    monthlyButton.classList.remove('active');
 })
 weeklyButton.addEventListener('click', ()=>{
     console.log('weekly');
@@ -79,6 +84,9 @@ weeklyButton.addEventListener('click', ()=>{
     liWeekly.forEach(li => {
         li.classList.add('active');
     });
+    dailyButton.classList.remove('active');
+    weeklyButton.classList.add('active');
+    monthlyButton.classList.remove('active');
 })
 monthlyButton.addEventListener('click', ()=>{
     console.log('monthly');
@@ -95,4 +103,7 @@ monthlyButton.addEventListener('click', ()=>{
     liMonthly.forEach(li => {
         li.classList.add('active');
     });
+    dailyButton.classList.remove('active');
+    weeklyButton.classList.remove('active');
+    monthlyButton.classList.add('active');
 })

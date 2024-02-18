@@ -116,6 +116,11 @@ body {
   background-color: var(--Dark-blue);
   border-radius: 16px;
   padding: 30px;
+  cursor: pointer;
+}
+
+.data-card:hover {
+  background-color: hsl(237, 31%, 24%);
 }
 
 #data-container {
@@ -205,4 +210,16 @@ body {
 .last-week {
   font-size: 1.3rem;
   color: var(--Pale-Blue);
+}
+
+#daily.active {
+  color: white;
+}
+
+#weekly.active {
+  color: white;
+}
+
+#monthly.active {
+  color: white;
 }
