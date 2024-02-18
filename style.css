@@ -5,7 +5,7 @@
 
   --Blue: hsl(246, 80%, 60%);
   /* work */
-  --Light-red: hsl(15, 100%, 70%);
+  --Orange: hsl(15, 100%, 70%);
   /* play */
   --Soft-blue: hsl(195, 74%, 62%);
   /* study */
@@ -34,10 +34,17 @@
 
 body {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  min-height: 100vh;
   font-size: 1.8rem;
   font-family: "Rubik", sans-serif;
   background-color: var(--Very-dark-blue);
+  place-content: center;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 1050px;
 }
 
 .profile {
@@ -83,17 +90,119 @@ body {
   cursor: pointer;
 }
 
-.data-card {
+.buttons li {
+  font-size: 1.6rem;
+}
+
+.buttons li:hover {
+  color: white;
+}
+
+.image-card {
   width: 250px;
   height: 245px;
   margin-bottom: 30px;
+  background-color: aqua;
+  border-radius: 16px;
+  display: flex;
+  align-items: last baseline;
+  margin-left: 30px;
+}
+
+.data-card {
+  width: 250px;
+  height: 200px;
   color: white;
   background-color: var(--Dark-blue);
   border-radius: 16px;
+  padding: 30px;
 }
 
 #data-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+}
+
+.daily {
+  display: none;
+}
+
+.daily.active {
+  display: block;
+}
+
+.weekly {
+  display: none;
+}
+
+.weekly.active {
+  display: block;
+}
+
+.monthly {
+  display: none;
+}
+
+.monthly.active {
+  display: block;
+}
+
+.work {
+  background-color: var(--Orange);
+  background-image: url(./images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: 155px -10px;
+}
+
+.play {
+  background-color: var(--Soft-blue);
+  background-image: url(./images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: 155px -10px;
+}
+
+.study {
+  background-color: var(--Light-red);
+  background-image: url(./images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-position: 155px -10px;
+}
+
+.exercise {
+  background-color: var(--Lime-green);
+  background-image: url(./images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position: 155px -3px;
+}
+
+.social {
+  background-color: var(--Violet);
+  background-image: url(./images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-position: 165px -10px;
+}
+
+.self-care {
+  background-color: var(--Soft-orange);
+  background-image: url(./images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position: 165px -10px;
+}
+
+.data-card h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.current {
+  font-size: 4.5rem;
+  font-weight: 300;
+  margin-bottom: 7px;
+}
+
+.last-week {
+  font-size: 1.3rem;
+  color: var(--Pale-Blue);
 }
